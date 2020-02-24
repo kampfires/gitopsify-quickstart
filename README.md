@@ -1,6 +1,6 @@
 # gitopsify Quickstart
 
-gitopsofy is an pipeline app that uses Jenkins-X to configure Gitops automations on an arbitrary git repository. 
+gitopsofy is a pipeline app that uses Jenkins-X to configure Gitops automations on an arbitrary git repository. 
 
 When you initialize a repo with the gitopsify pipeline, it will create a tekton pipeline in your kubernetes cluster that sets up a webhook on the target repo with prow including chatops setup, sets up your jx-bot on the repo, automates semantic versioning, git tagging and repo packaging for each merge to the repo. 
 
