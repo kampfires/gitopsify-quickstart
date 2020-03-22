@@ -1,6 +1,6 @@
 # gitopsify Quickstart
 
-gitopsofy is a Jenkins-X quickstart app that uses the JX Git Buildpack to add gitops automation to any repo of your choosing, regardless of the contents of the repo. When you use gitopsify as a quickstart or with jx import, it will utilize the kubernetes cluster your jx instance is running on to implement a tekton pipeline and prow configuration to deliver gitops automations to your target repo. 
+gitopsofy is a Jenkins-X quickstart app that uses the JX Git Buildpack to add gitops automation to any repo of your choosing, regardless of the contents of the repo. When you use gitopsify as a quickstart or with jx import, it will utilize the kubernetes cluster your jx instance is connected to and implements a tekton pipeline and prow configuration to deliver gitops automations to your target repo. 
 
 gitopsify also adds post-pr and post-merge processing scripts that allows you to execute functions against the contents of a pull request.
 - The **post-pr** script is intended to execute functions on the contents of pull requests that are submitted to a repo, after which the results are merged into the same pull request
