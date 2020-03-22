@@ -1,21 +1,10 @@
-buildPack: docker-helm
+buildPack: git
 pipelineConfig:
   pipelines:
     pullRequest:
-      build:
-        replace: true
+      postBuild:
         steps:
-        - command: echo "This template does not build anything"
-    release:
-      setVersion:
+        - command: ./pipescripts/post-merge-run.sh
+      setup:
         steps:
-          - sh: jx step next-version --use-git-tag-only --tag
-            name: tag-with-new-version
-      build:
-        replace: true
-        steps:
-        - command: echo "This template does not build anything"
-      promote:
-        replace: true
-        steps:
-        - command: echo "This template does not need promotion"
+        - command: ./pipescripts/post-pr-run.sh
